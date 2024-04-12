@@ -1,13 +1,20 @@
 {
   "name": "@chalabi/cosmoskit-template",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
+  "description": "A template for Cosmos Kit projects",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "update-deps": "bunx npm-check-updates --root --format group -i"
+  },
+  "author": "Joseph Chalabi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chalabi2/cosmos-kit-template"
   },
   "resolutions": {
     "react": "18.2.0",
