@@ -25,7 +25,7 @@ export const WalletList = ({
         </Dialog.Title>
         <button
           type="button"
-          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-gray-lightbg dark:hover:bg-white/10"
+          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-dark-bg-100 dark:hover:bg-white/10"
           onClick={onClose}
         >
           <span className="sr-only">Close</span>
@@ -37,7 +37,7 @@ export const WalletList = ({
           <button
             key={name}
             onClick={() => onWalletClicked(name)}
-            className="inline-flex items-center justify-between w-full px-2 py-2.5 transition duration-150 ease-in-out bg-white border rounded-lg border-black/10 dark:border-white/10 dark:bg-gray-lightbg group hover:border-purple-200"
+            className="inline-flex items-center justify-between w-full px-2 py-2.5 transition duration-150 ease-in-out bg-white border rounded-lg border-black/10 dark:border-white/10 dark:bg-dark-bg-100 group hover:border-purple-200 dark:hover:bg-dark-bg-50/25"
           >
             <div className="flex flex-row items-center space-x-2">
               <img

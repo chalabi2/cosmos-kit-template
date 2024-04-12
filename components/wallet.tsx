@@ -105,13 +105,14 @@ export const WalletSection: React.FC<WalletSectionProps> = ({ chainName }) => {
 
     return (
       <button
-        className="rounded-lg bg-purple-damp w-full hover:bg-purple-damp/75 inline-flex justify-center items-center py-2 font-medium text-dark-bg-800 dark:text-light-bg-100 text-sm"
+        className="rounded-lg bg-purple-damp w-full bg-mint inline-flex justify-center items-center py-2 font-medium text-dark-bg-800 dark:text-light-bg-100 text-sm"
         onClick={onClick}
       >
         <buttonData.icon className="flex-shrink-0 w-4 h-4 mr-2 text-dark-bg-800 dark:text-light-bg-100" />
         {buttonData.title}
       </button>
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, connect, openView]);
 
   return (
@@ -137,9 +138,9 @@ export const IconWallet: React.FC<WalletSectionProps> = ({ chainName }) => {
   const _renderConnectButton = useMemo(() => {
     if (status === WalletStatus.Connecting) {
       return (
-        <button className="rounded-lg w-12 h-12 hover:bg-purple-damp/75 justify-center items-center font-medium cursor-wait text-dark-bg-800 dark:text-light-bg-100 text-sm">
+        <button className="rounded-lg w-6 h-6 justify-center items-center mx-auto ml-[6px] font-medium cursor-wait text-dark-bg-800 dark:text-light-bg-100 text-sm">
           <svg
-            className="w-4 h-4 text-dark-bg-800 dark:text-light-bg-100 animate-spin mx-auto"
+            className="w-6 h-6 text-dark-bg-800 dark:text-mint justify-center items-center animate-spin mx-auto"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -174,12 +175,13 @@ export const IconWallet: React.FC<WalletSectionProps> = ({ chainName }) => {
 
     return (
       <button
-        className="rounded-lg mx-auto hover:bg-purple-damp/75  justify-center items-center  font-medium text-dark-bg-800 dark:text-light-bg-100 text-sm"
+        className="rounded-lg mx-auto hover:bg-dark-bg-100/10 dark:hover:bg-light-bg-100/10 p-1 transition-all duration-200 ease-in-out focus:ring-4 focus:ring-mint-300 dark:focus:ring-mint-900  justify-center items-center  font-medium text-dark-bg-800 dark:text-light-bg-100 text-sm"
         onClick={onClick}
       >
-        <buttonData.icon className=" w-6 h-6 text-dark-bg-800 dark:text-light-bg-100" />
+        <buttonData.icon className=" w-6 h-6 text-dark-bg-800 dark:text-light-bg-100 transition-all duration-200 ease-in-out  hover:text-mint dark:hover:text-mint" />
       </button>
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status, connect, openView]);
 
   return (

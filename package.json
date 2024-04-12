@@ -1,12 +1,13 @@
 {
-  "name": "@cosmology/tailwindcss",
-  "version": "1.9.1",
+  "name": "@chalabi/cosmoskit-template",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "update-deps": "bunx npm-check-updates --root --format group -i"
   },
   "resolutions": {
     "react": "18.2.0",

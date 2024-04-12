@@ -5,13 +5,16 @@ import type { AppProps } from "next/app";
 
 import { SignerOptions, wallets } from "cosmos-kit";
 import { ChainProvider } from "@cosmos-kit/react";
-import { chains, assets } from "chain-registry";
+import { chains } from "chain-registry";
 
 import { TailwindModal } from "../components";
 import { ThemeProvider } from "../contexts/theme";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import SideNav from "../components/react/sideNav";
+import { AssetList } from "@chain-registry/types";
+
+const assets: AssetList[] = [];
 
 function Template({ Component, pageProps }: AppProps) {
   const signerOptions: SignerOptions = {
@@ -27,6 +30,7 @@ function Template({ Component, pageProps }: AppProps) {
       chains={chains}
       assetLists={assets}
       wallets={wallets}
+      logLevel="NONE"
       walletConnectOptions={{
         signClient: {
           projectId: "a8510432ebb71e6948cfd6cde54b70f7",

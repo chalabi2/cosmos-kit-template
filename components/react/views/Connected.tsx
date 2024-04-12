@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { useChain } from '@cosmos-kit/react';
-import { Dialog } from '@headlessui/react';
+import { useChain } from "@cosmos-kit/react";
+import { Dialog } from "@headlessui/react";
 import {
   XMarkIcon,
   ArrowRightOnRectangleIcon,
   ClipboardDocumentIcon,
-} from '@heroicons/react/24/outline';
-import { ChevronLeftIcon, CheckIcon } from '@heroicons/react/20/solid';
-import copyToClipboard from 'copy-to-clipboard';
-import { useState } from 'react';
+} from "@heroicons/react/24/outline";
+import { ChevronLeftIcon, CheckIcon } from "@heroicons/react/20/solid";
+import copyToClipboard from "copy-to-clipboard";
+import { useState } from "react";
 
 export function truncate(address: string) {
   return `${address.substring(0, 12)}...${address.substring(
@@ -21,7 +21,7 @@ export const Address = ({ children: address }: { children: string }) => {
   const [copied, setCopied] = useState<boolean>(false);
   return (
     <button
-      className="inline-flex items-center justify-center px-6 py-1 mx-4 mb-4 space-x-2 text-sm text-gray-500 bg-white border rounded-full dark:text-white/75 dark:bg-gray-lightbg border-black/10 dark:border-white/10 hover:bg-zinc-200 dark:hover:bg-white/10 hover:border-zinc-200 dark:hover:border-white/10"
+      className="inline-flex items-center justify-center px-6 py-1 mx-4 mb-4 space-x-2 text-sm text-gray-500 bg-light-bg-100 dark:bg-dark-bg-100 border rounded-full dark:text-white/75 dark:bg-gray-lightbg border-black/10 dark:border-white/10 hover:bg-zinc-200 dark:hover:bg-white/10 hover:border-zinc-200 dark:hover:border-white/10"
       onClick={() => {
         copyToClipboard(address);
         setCopied(true);
@@ -30,7 +30,7 @@ export const Address = ({ children: address }: { children: string }) => {
         }, 1500);
       }}
     >
-      <p>{truncate(address || '')}</p>
+      <p>{truncate(address || "")}</p>
       {copied ? (
         <CheckIcon className="w-3 h-3 text-gray-500 dark:text-white/75" />
       ) : (
@@ -62,7 +62,7 @@ export const Connected = ({
       <div className="flex flex-row items-center justify-between pl-3">
         <button
           type="button"
-          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-gray-lightbg dark:hover:bg-white/10"
+          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-dark-bg-100 dark:hover:bg-white/10"
           onClick={onReturn}
         >
           <span className="sr-only">Return</span>
@@ -76,7 +76,7 @@ export const Connected = ({
         </Dialog.Title>
         <button
           type="button"
-          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-gray-lightbg dark:hover:bg-white/10"
+          className="p-2 text-black bg-white rounded-full hover:bg-gray-200 dark:text-white dark:bg-dark-bg-100 dark:hover:bg-white/10"
           onClick={onClose}
         >
           <span className="sr-only">Close</span>
@@ -92,18 +92,18 @@ export const Connected = ({
             className="flex-shrink-0 w-4 h-4 mt-1 aspect-1"
           />
           <p className="mt-3 mb-2 text-lg font-medium text-black dark:text-white">
-            {username || ''}
+            {username || ""}
           </p>
         </div>
-        <Address>{address || ''}</Address>
+        <Address>{address || ""}</Address>
         <button
-          className="rounded-lg bg-purple-damp hover:bg-purple-damp/75 inline-flex justify-center items-center py-2.5 font-medium text-white"
+          className="rounded-lg w-[180px] mx-auto inline-flex justify-center items-center py-2.5 font-medium text-black bg-mint dark:text-white"
           onClick={() => {
             disconnect();
             onClose();
           }}
         >
-          <ArrowRightOnRectangleIcon className="flex-shrink-0 w-5 h-5 mr-2 text-white" />
+          <ArrowRightOnRectangleIcon className="flex-shrink-0 w-5 h-5 mr-2 text-black dark:text-white" />
           Disconnect
         </button>
       </div>

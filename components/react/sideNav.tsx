@@ -26,8 +26,8 @@ export default function SideNav() {
   }) => (
     <li>
       <Link href={href} passHref legacyBehavior>
-        <a className="flex items-center mt-8 text-dark-bg-800 rounded-lg transition-all duration-300 ease-in-out dark:text-light-bg-100 hover:text-mint-600 dark:hover:text-mint hover:bg-dark-bg-100/10 dark:hover:bg-light-bg-100/10">
-          <Icon className="w-12 h-12" />
+        <a className="flex justify-center p-1 items-center mt-8 text-dark-bg-800 rounded-lg transition-all duration-300 ease-in-out dark:text-light-bg-100 hover:text-mint-600 dark:hover:text-mint hover:bg-dark-bg-100/10 dark:hover:bg-light-bg-100/10">
+          <Icon className="w-8 h-8" />
         </a>
       </Link>
     </li>
@@ -46,25 +46,25 @@ export default function SideNav() {
           />
         </a>
       </Link>
-      <ul className="  p-3 mx-auto items-center">
+      <ul className=" mt-20 mx-auto items-center">
         <NavItem Icon={PiCoinsThin} href="/bank" />
         <NavItem Icon={PiUsersFourThin} href="/groups" />
         <NavItem Icon={PiChalkboardTeacherThin} href="/admins" />
         <NavItem Icon={PiFactoryThin} href="/factory" />
         <NavItem Icon={PiBankThin} href="/governance" />
       </ul>
-      <div className="bottom-6 absolute space-y-4 p-4 mx-auto items-center">
+      <div className="bottom-6 justify-center absolute space-y-4 p-3 mx-auto items-center">
         <div className="w-full mx-auto flex flex-col items-center justify-center">
           <IconWallet chainName="akash" />
         </div>
         <button
-          className="flex items-center  text-dark-bg-800 dark:text-light-bg-100 rounded-lg transition duration-75 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+          className="flex focus:ring-4 focus:ring-mint-300 dark:focus:ring-mint-900 items-center justify-center text-dark-bg-800 dark:text-light-bg-100 p-1 rounded-lg transition duration-200 hover:text-gray-900 dark:hover:text-white hover:bg-dark-bg-100/10 dark:hover:bg-light-bg-100/10"
           onClick={toggleTheme}
         >
           {theme === "light" ? (
-            <PiMoonThin className="w-6 h-6 text-dark-bg-800 dark:text-light-bg-100" />
+            <PiMoonThin className="w-6 h-6 dark:hover:text-mint text-dark-bg-800 dark:text-light-bg-100 hover:text-mint transition-all duration-300 ease-in-out" />
           ) : (
-            <PiSunThin className="w-6 h-6 text-dark-bg-800 dark:text-light-bg-100" />
+            <PiSunThin className="w-6 h-6 dark:hover:text-mint text-dark-bg-800 dark:text-light-bg-100 hover:text-mint transition-all duration-300 ease-in-out" />
           )}
         </button>
       </div>
@@ -75,7 +75,7 @@ export default function SideNav() {
     <li>
       <button
         type="button"
-        className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+        className="flex items-center p-2 w-full text-base font-normal ease-in-out text-gray-900 rounded-lg transition duration-220 group hover:bg-gray-100 dark:text-white dark:hover:bg-dark-bg-600/50 hover:dark:text-mint"
       >
         <span className="flex-1 ml-3 text-left whitespace-nowrap">{label}</span>
       </button>
@@ -88,7 +88,7 @@ export default function SideNav() {
       className="overflow-y-auto relative py-5 px-3 w-64 h-full bg-light-bg-300 border-r border-mint-100 dark:bg-dark-bg-300 dark:border-mint-400 transition-transform duration-300 ease-in-out"
     >
       <div className="flex ml-6 items-center row-span-1 mt-2">
-        <h1 className="mb-4 text-md font-extrabold tracking-tight leading-none md:text-xl xl:text-xl bg-clip-text text-transparent bg-gradient-to-r from-white to-mint">
+        <h1 className="mb-4 text-md font-extrabold tracking-tight leading-none md:text-xl xl:text-xl bg-clip-text text-transparent bg-gradient-to-r from-black to-mint dark:from-white dark:to-mint">
           Template
         </h1>
         <div className=" -mt-4 ml-6 w-6 h-6">
@@ -161,9 +161,9 @@ export default function SideNav() {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
+              fillRule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"
+              clipRule="evenodd"
             ></path>
           </svg>
         </button>
